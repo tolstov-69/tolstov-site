@@ -3,115 +3,285 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Хірург-флеболог | Толстов Олександр Леонідович</title>
+<title>Толстов Олександр Леонідович | Хірург-флеболог</title>
 
 <style>
-
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f8fc;
-color:#14345d;
+*{
+    box-sizing:border-box;
 }
 
-header{
-background:white;
-padding:40px 20px;
-text-align:center;
-box-shadow:0 3px 15px rgba(0,0,0,.08);
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f8fc;
+    color:#14345d;
+    line-height:1.6;
+}
+
+.hero{
+    background:white;
+    padding:40px 20px;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.hero-content{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.photo{
+    width:260px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.hero-text{
+    flex:1;
 }
 
 h1{
-margin:0;
-font-size:34px;
+    margin:0;
+    font-size:42px;
+    color:#14345d;
 }
 
-h2{
-margin-top:10px;
-font-weight:400;
-color:#2d80c5;
+.subtitle{
+    font-size:28px;
+    color:#2d80c5;
+    margin:10px 0 20px;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:18px;
-margin-bottom:25px;
-box-shadow:0 4px 18px rgba(0,0,0,.08);
+.description{
+    font-size:18px;
+    color:#4b5f7a;
+    max-width:600px;
 }
 
 .button{
-display:block;
-background:#0088ff;
-color:white;
-text-decoration:none;
-padding:18px;
-border-radius:12px;
-text-align:center;
-font-size:22px;
-font-weight:bold;
-margin-top:20px;
+    display:inline-block;
+    background:#0a84ff;
+    color:white;
+    text-decoration:none;
+    padding:18px 30px;
+    border-radius:14px;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:25px;
+}
+
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 6px 24px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+h2{
+    margin-top:0;
+    color:#14345d;
+    font-size:30px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.service{
+    background:#f8fbff;
+    border-radius:14px;
+    padding:18px;
+    border:1px solid #e3eef8;
+}
+
+.service strong{
+    display:block;
+    margin-bottom:6px;
+    color:#14345d;
 }
 
 .phone{
-font-size:28px;
-text-align:center;
-margin-top:15px;
+    font-size:34px;
+    font-weight:bold;
+    color:#14345d;
+    margin:10px 0;
+}
+
+.contact-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.contact-buttons a{
+    flex:1;
+    min-width:180px;
+    text-align:center;
+    text-decoration:none;
+    padding:16px;
+    border-radius:12px;
+    font-weight:bold;
+    color:white;
+}
+
+.call{
+    background:#0a84ff;
+}
+
+.telegram{
+    background:#229ED9;
+}
+
+.viber{
+    background:#7360F2;
 }
 
 .footer{
-text-align:center;
-padding:30px;
-color:#666;
+    text-align:center;
+    padding:35px;
+    color:#6b7280;
 }
 
-</style>
+@media (max-width:768px){
 
+.hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.photo{
+    width:220px;
+}
+
+h1{
+    font-size:34px;
+}
+
+.subtitle{
+    font-size:24px;
+}
+
+.services{
+    grid-template-columns:1fr;
+}
+
+.button{
+    width:100%;
+}
+
+.contact-buttons{
+    flex-direction:column;
+}
+
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<section class="hero">
+<div class="hero-content">
+
+<img src="doctor.png" alt="Толстов Олександр Леонідович" class="photo">
+
+<div class="hero-text">
 
 <h1>Толстов Олександр Леонідович</h1>
 
-<h2>Хірург-флеболог</h2>
+<div class="subtitle">Хірург-флеболог</div>
 
-</header>
+<p class="description">
+Сучасна діагностика та лікування захворювань вен.
+Індивідуальний підхід, малоінвазивні методики та
+доказова флебологія.
+</p>
+
+<a href="tel:+380689523823" class="button">
+📞 Записатися на консультацію
+</a>
+
+</div>
+</div>
+</section>
 
 <div class="container">
 
 <div class="card">
 
-<h2>Запис на консультацію</h2>
+<h2>Послуги</h2>
 
-<p>Дуплексне сканування вен</p>
+<div class="services">
 
-<p>Лікування варикозної хвороби</p>
+<div class="service">
+<strong>УЗД вен</strong>
+Дуплексне сканування вен
+</div>
 
-<p>Склеротерапія</p>
+<div class="service">
+<strong>Лікування варикозу</strong>
+Сучасні малоінвазивні методики
+</div>
 
-<p>Ендовенозна лазерна коагуляція</p>
+<div class="service">
+<strong>Склеротерапія</strong>
+Безболісне та ефективне лікування
+</div>
 
-<p>Мініфлебектомія</p>
+<div class="service">
+<strong>Ендовенозна лазерна коагуляція</strong>
+Амбулаторне лікування без госпіталізації
+</div>
 
-<a class="button"
-href="tel:+380689523823">
+<div class="service">
+<strong>Мініфлебектомія</strong>
+Естетичне видалення варикозних вен
+</div>
 
+<div class="service">
+<strong>Компресійна терапія</strong>
+Індивідуальний підбір трикотажу
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Контакти</h2>
+
+<div class="phone">+38 (068) 952-38-23</div>
+
+<p><strong>Клініка MED CITY</strong></p>
+
+<p>м. Київ</p>
+
+<div class="contact-buttons">
+
+<a href="tel:+380689523823" class="call">
 📞 Зателефонувати
-
 </a>
 
-<div class="phone">
+<a href="https://t.me/" class="telegram">
+Telegram
+</a>
 
-+38 (068) 952-38-23
+<a href="viber://chat?number=%2B380689523823" class="viber">
+Viber
+</a>
 
 </div>
 
@@ -121,12 +291,9 @@ href="tel:+380689523823">
 
 <div class="footer">
 
-Клініка MED CITY<br>
-
-м. Київ
+© 2026 Толстов Олександр Леонідович • Хірург-флеболог
 
 </div>
 
 </body>
-
 </html>
