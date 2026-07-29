@@ -66,7 +66,37 @@ body{
     margin-bottom:22px;
     box-shadow:0 6px 22px rgba(0,0,0,.08);
 }
+h2{
+    font-size:32px;
+    color:#14345d;
+    margin-bottom:15px;
+}
 
+details{
+    margin-top:15px;
+}
+
+details summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#0a84ff;
+    font-size:18px;
+    list-style:none;
+}
+
+details summary::-webkit-details-marker{
+    display:none;
+}
+
+details summary::after{
+    content:"+";
+    float:right;
+    font-size:24px;
+}
+
+details[open] summary::after{
+    content:"−";
+}
 h2{
     font-size:28px;
     margin-bottom:14px;
