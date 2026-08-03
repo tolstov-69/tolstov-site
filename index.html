@@ -205,6 +205,49 @@ h2{
     text-align: justify;
     line-height: 1.7;
 }
+    .service-item {
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.service-btn {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 16px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.service-btn::after {
+    content: "+";
+    float: right;
+    color: #0077b6;
+    font-size: 22px;
+}
+
+.service-item.active .service-btn::after {
+    content: "−";
+}
+
+.service-content {
+    display: none;
+    padding: 0 16px 16px;
+}
+
+.service-item.active .service-content {
+    display: block;
+}
+
+.service-content p {
+    margin: 0;
+    text-align: justify;
+    line-height: 1.7;
+}
 </style>
 </head>
 
@@ -267,27 +310,44 @@ h2{
 </div>
 </section>
 
-<div class="card">
+<section id="services">
+  <h2>Послуги</h2>
 
-<h2>Послуги</h2>
+  <div class="service-item">
+    <button class="service-btn">Консультація флеболога</button>
+    <div class="service-content">
+      <p>Первинний огляд, аналіз скарг, оцінка стану вен та підбір оптимального методу лікування.</p>
+    </div>
+  </div>
 
-<div class="services">
+  <div class="service-item">
+    <button class="service-btn">УЗД вен нижніх кінцівок</button>
+    <div class="service-content">
+      <p>Дуплексне сканування вен дозволяє оцінити роботу венозних клапанів, виявити рефлюкс, тромбоз та інші патології.</p>
+    </div>
+  </div>
 
-<div class="service">Дуплексне сканування вен</div>
+  <div class="service-item">
+    <button class="service-btn">Склеротерапія</button>
+    <div class="service-content">
+      <p>Малоінвазивне лікування варикозних вен і судинних зірочок за допомогою спеціального препарату без госпіталізації.</p>
+    </div>
+  </div>
 
-<div class="service">Лікування варикозної хвороби</div>
+  <div class="service-item">
+    <button class="service-btn">Ендовенозна лазерна коагуляція (EVLK)</button>
+    <div class="service-content">
+      <p>Сучасний метод лікування варикозу без великих розрізів, з швидким відновленням та мінімальним дискомфортом.</p>
+    </div>
+  </div>
 
-<div class="service">Склеротерапія</div>
-
-<div class="service">Ендовенозна лазерна коагуляція (ЕВЛК)</div>
-
-<div class="service">Мініфлебектомія</div>
-
-<div class="service">Компресійна терапія</div>
-
-</div>
-
-</div>
+  <div class="service-item">
+    <button class="service-btn">Мініфлебектомія</button>
+    <div class="service-content">
+      <p>Видалення варикозно змінених вен через мікропроколи з чудовим косметичним результатом.</p>
+    </div>
+  </div>
+</section>
 
 <div class="card">
 <div class="card" id="articles">
@@ -383,6 +443,18 @@ h2{
 © 2026 Толстов Олександр Леонідович • Хірург-флеболог
 
 </div>
+<script>
+document.querySelectorAll('.service-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
 
+    document.querySelectorAll('.service-item').forEach(el => {
+      if (el !== item) el.classList.remove('active');
+    });
+
+    item.classList.toggle('active');
+  });
+});
+</script>
 </body>
 </html>
